@@ -44,13 +44,13 @@ int main() {
     printf("Salary amount/hr: ");
     scanf("%f", &salaryPerHour);
 
-    // Calculate salary
-    float salary = workingHours * salaryPerHour;
+   
 
     // Display results
     printf("Expected Output:\n");
     printf("Employees ID = %s\n", employeeID);
-    printf("Salary = U$ %.2f\n", salary);
+    printf("Salary = U$ %.2f\n", workingHours * salaryPerHour);
 
     return 0;
 }
+
