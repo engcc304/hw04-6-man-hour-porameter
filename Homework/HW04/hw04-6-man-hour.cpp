@@ -30,27 +30,27 @@
 #include <stdio.h>
 
 int main() {
-    char employeeID[10];
-    int workingHours;
-    float salaryPerHour;
+    char employeeID[10] ;
+    int workingHours ;
+    float salaryPerHour ;
 
     // Input employee data
-    printf("Input the Employees ID(Max. 10 chars): ");
-    scanf("%s", employeeID);
+    printf( "Input the Employees ID(Max. 10 chars): ") ;
+    scanf ("%s" , employeeID) ;
 
-    printf("Input the working hrs: ");
-    scanf("%d", &workingHours);
+    printf( "Input the working hrs: ") ;
+    scanf( "%d" , &workingHours) ;
 
-    printf("Salary amount/hr: ");
-    scanf("%f", &salaryPerHour);
+    printf( "Salary amount/hr: ") ;
+    scanf( "%f" , &salaryPerHour) ;
 
    
 
     // Display results
-    printf("Expected Output:\n");
-    printf("Employees ID = %s\n", employeeID);
-    printf("Salary = U$ %.2f\n", workingHours * salaryPerHour);
+    printf( "Expected Output:\n") ;
+    printf( "Employees ID = %s\n" , employeeID) ;
+    printf( "Salary = U$ %.2f\n" , workingHours * salaryPerHour) ;
 
-    return 0;
-}
+    return 0 ;
+}//end main fuction
 
