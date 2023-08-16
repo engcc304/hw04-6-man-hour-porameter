@@ -40,17 +40,19 @@ int main() {
     char id[10];
     float timework;
     float money;
-    printf("Test case: \n");
+   
+    
     printf("Input the Employees ID (Max. 10 chars):\n");
     scanf("%s", &id);
     printf("Input the working hrs:\n");
     scanf("%f", &timework);
     printf("Salary amount/hr:\n");
     scanf("%f", &money);
+   
     float sum;
     sum = timework * money;
-    printf("Output: \n");
-    printf("Expected Output:\nEmployees ID = %s\n", id);
+    
+    printf("Employees ID = %s\n", id);
     printf("Salary = U$ ");
     commaprint((int)sum);
     printf(".%02d", (int)(sum * 100) % 100);
