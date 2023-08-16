@@ -28,29 +28,32 @@
 */
 
 #include <stdio.h>
-
+void commaprint(int number) {
+    if (number < 1000) {
+        printf("%d", number);
+        return;
+    }
+    commaprint(number / 1000);
+    printf(",%03d", number % 1000);
+}
 int main() {
-    char employeeID[10] ;
-    int workingHours ;
-    float salaryPerHour ;
+    char id[10];
+    float timework;
+    float money;
+    printf("Test case: \n");
+    printf("Input the Employees ID (Max. 10 chars):\n");
+    scanf("%s", &id);
+    printf("Input the working hrs:\n");
+    scanf("%f", &timework);
+    printf("Salary amount/hr:\n");
+    scanf("%f", &money);
+    float sum;
+    sum = timework * money;
+    printf("Output: \n");
+    printf("Expected Output:\nEmployees ID = %s\n", id);
+    printf("Salary = U$ ");
+    commaprint((int)sum);
+    printf(".%02d", (int)(sum * 100) % 100);
 
-    // Input employee data
-    printf( "Input the Employees ID(Max. 10 chars): ") ;
-    scanf ("%s" , employeeID) ;
-
-    printf( "Input the working hrs: ") ;
-    scanf( "%d" , &workingHours) ;
-
-    printf( "Salary amount/hr: ") ;
-    scanf( "%f" , &salaryPerHour) ;
-
-   
-
-    // Display results
-    printf( "Expected Output:\n") ;
-    printf( "Employees ID = %s\n" , employeeID) ;
-    printf( "Salary = U$ %.2f\n" , workingHours * salaryPerHour) ;
-
-    return 0 ;
-}//end main fuction
-
+    return 0;
+}
